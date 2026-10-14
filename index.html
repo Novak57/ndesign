@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>nDesign · Izrada web stranica</title>
+    <meta
+      name="description"
+      content="nDesign — izrada modernih web stranica za mala poduzeća i obrtnike u Hrvatskoj. Transparentni paketi i besplatna demo verzija prije dogovora."
+    />
+    <meta name="theme-color" content="#f3f3f1" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="header__bar">
+        <a class="logo" href="#top" aria-label="nDesign">
+          <img class="logo__mark" src="img/logo-n.svg" alt="" width="64" height="64" />
+          <span class="logo__text"><span class="logo__n">n</span>Design</span>
+        </a>
+
+        <button class="menu-btn" id="menu-btn" type="button" aria-label="Izbornik" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+
+        <nav class="nav" aria-label="Glavna navigacija">
+          <a class="nav__link" href="#usluge" data-i18n="nav.services">Usluge</a>
+          <a class="nav__link" href="#cjenik" data-i18n="nav.pricing">Cjenik</a>
+          <a class="nav__link" href="#o-nama" data-i18n="nav.about">O nama</a>
+          <a class="nav__link" href="#faq" data-i18n="nav.faq">FAQ</a>
+        </nav>
+
+        <div class="header__actions">
+          <div class="lang-toggle" role="group" aria-label="Jezik">
+            <button class="lang-toggle__btn lang-toggle__btn--active" type="button" data-lang="hr">HR</button>
+            <button class="lang-toggle__btn" type="button" data-lang="en">EN</button>
+          </div>
+          <a class="btn btn--primary btn--sm header__cta" href="#kontakt" data-i18n="nav.cta">Zatražite ponudu</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobilna navigacija">
+      <div class="lang-toggle lang-toggle--mobile" role="group" aria-label="Jezik">
+        <button class="lang-toggle__btn lang-toggle__btn--active" type="button" data-lang="hr">HR</button>
+        <button class="lang-toggle__btn" type="button" data-lang="en">EN</button>
+      </div>
+      <a class="mobile-nav__link" href="#usluge" data-i18n="nav.services">Usluge</a>
+      <a class="mobile-nav__link" href="#cjenik" data-i18n="nav.pricing">Cjenik</a>
+      <a class="mobile-nav__link" href="#o-nama" data-i18n="nav.about">O nama</a>
+      <a class="mobile-nav__link" href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a class="mobile-nav__link mobile-nav__link--accent" href="#kontakt" data-i18n="nav.cta">Zatražite ponudu</a>
+    </nav>
+
+    <main id="top">
+      <section class="hero" aria-label="Uvod">
+        <a class="header__promo" href="#kontakt">
+          <span class="header__promo-tag" data-i18n="nav.promo.tag">Demo</span>
+          <span class="header__promo-text" data-i18n="nav.promo.text">
+            Funkcionalna stranica online — bez obveze i bez troška
+          </span>
+          <span class="header__promo-cta" data-i18n="nav.promo.cta">Zatražite demo</span>
+        </a>
+        <div class="container hero__shell">
+          <div class="hero__intro reveal">
+            <p class="hero__badge" data-i18n="hero.badge">nDesign · Zagreb</p>
+            <h1 class="hero__title" data-i18n="hero.title" data-i18n-html>
+              Web stranice za <em>obrte i mala poduzeća</em>
+            </h1>
+            <p class="hero__text" data-i18n="hero.text">
+              Prije bilo kakve obveze izradimo funkcionalnu demo verziju, postavimo je online i
+              pošaljemo Vam link. Fiksna cijena, bez skrivenih troškova.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary btn--lg" href="#kontakt" data-i18n="hero.cta.primary">
+                Zatražite demo verziju
+              </a>
+            </div>
+            <p class="hero__note" data-i18n="hero.note">
+              Fiksna cijena · Bez obveze · Odgovor u 24 sata
+            </p>
+          </div>
+
+          <div class="coverflow reveal" id="coverflow">
+            <div class="coverflow__viewport">
+              <button
+                class="coverflow__btn coverflow__btn--prev"
+                type="button"
+                aria-label="Prethodni projekt"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                  <path d="M15 5 8 12l7 7" />
+                </svg>
+              </button>
+
+              <div class="coverflow__stage">
+                <a
+                  class="coverflow__card"
+                  data-pos="0"
+                  href="https://novak57.github.io/frizerski-salon-m/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/salon-m.png" alt="Frizerski salon M" width="1600" height="900" fetchpriority="high" />
+                  <span class="coverflow__meta">
+                    <strong>Frizerski salon M</strong>
+                    <em>Zagreb</em>
+                  </span>
+                </a>
+                <a
+                  class="coverflow__card"
+                  data-pos="1"
+                  href="https://novak57.github.io/apartmani-mir/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/mir.jpg" alt="Apartmani MIR" width="1200" height="771" />
+                  <span class="coverflow__meta">
+                    <strong>Apartmani MIR</strong>
+                    <em>Drašnice</em>
+                  </span>
+                </a>
+                <a
+                  class="coverflow__card"
+                  data-pos="-1"
+                  href="https://novak57.github.io/lumos-pozega/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/lumos.jpg" alt="Lumos Požega" width="1200" height="771" />
+                  <span class="coverflow__meta">
+                    <strong>Lumos Požega</strong>
+                    <em>Psihoterapija</em>
+                  </span>
+                </a>
+              </div>
+
+              <button
+                class="coverflow__btn coverflow__btn--next"
+                type="button"
+                aria-label="Sljedeći projekt"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+                  <path d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="coverflow__bar">
+              <div class="coverflow__dots" role="tablist" aria-label="Projekti"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__steps">
+          <div class="container">
+            <ol class="steps-strip">
+              <li class="steps-strip__item">
+                <span class="steps-strip__num">01</span>
+                <div>
+                  <p class="steps-strip__title" data-i18n="steps.1.title">Kratki upit</p>
+                  <p data-i18n="steps.1.text">Opisujete čime se bavite. Traje nekoliko minuta.</p>
+                </div>
+              </li>
+              <li class="steps-strip__item">
+                <span class="steps-strip__num">02</span>
+                <div>
+                  <p class="steps-strip__title" data-i18n="steps.2.title">Demo verzija</p>
+                  <p data-i18n="steps.2.text">
+                    Funkcionalna stranica online — bez obveze i bez troška.
+                  </p>
+                </div>
+              </li>
+              <li class="steps-strip__item">
+                <span class="steps-strip__num">03</span>
+                <div>
+                  <p class="steps-strip__title" data-i18n="steps.3.title">Vaša odluka</p>
+                  <p data-i18n="steps.3.text">
+                    Ako ste zadovoljni, prebacujemo je na Vašu domenu.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="usluge">
+        <div class="container">
+          <div class="reveal">
+            <span class="section__eyebrow" data-i18n="services.eyebrow">Usluge</span>
+            <h2 class="section__title" data-i18n="services.title">Što nudimo</h2>
+            <p class="section__lead" data-i18n="services.lead">
+              Fokus na ono što malim poduzećima stvarno treba — jasna online prisutnost bez
+              nepotrebne kompleksnosti.
+            </p>
+          </div>
+          <div class="services__grid services__grid--core">
+            <article class="service-card reveal">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <rect x="3" y="4" width="18" height="14" rx="2" />
+                  <path d="M8 20h8M12 18v2" />
+                </svg>
+              </div>
+              <h3 data-i18n="services.1.title">Web stranice</h3>
+              <p data-i18n="services.1.text">
+                Prezentacijske stranice za obrte i mala poduzeća — jasan prikaz usluga, kontakt i
+                profesionalan dojam.
+              </p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <path d="M6 4h12v16H6zM9 8h6M9 12h6M9 16h4" />
+                </svg>
+              </div>
+              <h3 data-i18n="services.2.title">CMS sustavi</h3>
+              <p data-i18n="services.2.text">
+                Blog, galerija ili oboje — s mogućnošću samostalnog ažuriranja sadržaja bez tehničkog
+                znanja.
+              </p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <path d="M4 6h16M4 12h10M4 18h13" />
+                </svg>
+              </div>
+              <h3 data-i18n="services.3.title">Projekti po dogovoru</h3>
+              <p data-i18n="services.3.text">
+                Veći ili specifični zahtjevi — rezervacije, članstva, integracije ili nešto što
+                ne stane u standardni paket. Cijena i opseg dogovaraju se nakon kratkog upita.
+              </p>
+            </article>
+            <article class="service-card reveal">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
+                  <circle cx="12" cy="12" r="5" />
+                </svg>
+              </div>
+              <h3 data-i18n="services.4.title">Održavanje i podrška</h3>
+              <p data-i18n="services.4.text">
+                Hosting, sigurnosna ažuriranja, backup i sitne izmjene — kako biste se mogli
+                fokusirati na poslovanje.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="cjenik">
+        <div class="container">
+          <div class="reveal">
+            <span class="section__eyebrow" data-i18n="pricing.eyebrow">Cjenik</span>
+            <h2 class="section__title" data-i18n="pricing.title">Transparentni paketi</h2>
+            <p class="section__lead" data-i18n="pricing.lead">
+              Fiksne cijene bez skrivenih troškova. Odaberite paket koji odgovara Vašem poslovanju.
+            </p>
+          </div>
+          <div class="pricing__grid">
+            <article class="price-card reveal">
+              <div class="price-card__name" data-i18n="pricing.start.name">Start</div>
+              <p class="price-card__ideal" data-i18n="pricing.start.ideal">Idealno za: brzu online vizitku</p>
+              <div class="price-card__price" data-i18n="pricing.start.price">390 €</div>
+              <div class="price-card__maint" data-i18n="pricing.start.maint">
+                + 25 €/mj — hosting, backup, do 30 min izmjena
+              </div>
+              <ul class="price-card__features">
+                <li data-i18n="pricing.start.f1">1 stranica, do 5 sekcija</li>
+                <li data-i18n="pricing.start.f2">Kontakt forma i navigacija po sekcijama</li>
+                <li data-i18n="pricing.start.f3">Responzivni dizajn + SEO osnove</li>
+                <li data-i18n="pricing.start.f4">Domena i hosting prve godine</li>
+                <li data-i18n="pricing.start.f5">2 kruga izmjena dizajna</li>
+                <li data-i18n="pricing.start.f6">Rok izrade: 5–10 radnih dana</li>
+              </ul>
+              <button class="btn btn--ghost" type="button" data-package="Start" data-i18n="pricing.cta">
+                Odaberite paket
+              </button>
+            </article>
+            <article class="price-card reveal">
+              <div class="price-card__name" data-i18n="pricing.business.name">Business</div>
+              <p class="price-card__ideal" data-i18n="pricing.business.ideal">Idealno za: salone, restorane, obrte</p>
+              <div class="price-card__price" data-i18n="pricing.business.price">690 €</div>
+              <div class="price-card__maint" data-i18n="pricing.business.maint">
+                + 30 €/mj — hosting, backup, do 30 min izmjena
+              </div>
+              <ul class="price-card__features">
+                <li data-i18n="pricing.business.f1">Do 8 sekcija ili do 3 zasebne stranice</li>
+                <li data-i18n="pricing.business.f2">Više sadržaja, slika i galerija</li>
+                <li data-i18n="pricing.business.f3">Kontakt forma, Google Maps i SEO osnove</li>
+                <li data-i18n="pricing.business.f4">Domena, hosting i Google Analytics</li>
+                <li data-i18n="pricing.business.f5">2 kruga izmjena dizajna</li>
+                <li data-i18n="pricing.business.f6">Rok izrade: 2–3 tjedna</li>
+              </ul>
+              <button class="btn btn--ghost" type="button" data-package="Business" data-i18n="pricing.cta">
+                Odaberite paket
+              </button>
+            </article>
+            <article class="price-card price-card--featured reveal" data-i18n-popular>
+              <div class="price-card__name" data-i18n="pricing.growth.name">Growth</div>
+              <p class="price-card__ideal" data-i18n="pricing.growth.ideal">Idealno za: česte izmjene sadržaja</p>
+              <div class="price-card__price" data-i18n="pricing.growth.price">1.090 €</div>
+              <div class="price-card__maint" data-i18n="pricing.growth.maint">
+                + 45 €/mj — hosting, backup, CMS podrška
+              </div>
+              <ul class="price-card__features">
+                <li data-i18n="pricing.growth.f1">CMS — samostalno ažuriranje sadržaja</li>
+                <li data-i18n="pricing.growth.f2">Blog, galerija ili oboje</li>
+                <li data-i18n="pricing.growth.f3">Do 8 sekcija ili stranica</li>
+                <li data-i18n="pricing.growth.f4">Domena i hosting prve godine</li>
+                <li data-i18n="pricing.growth.f5">Edukacija i 3 kruga izmjena</li>
+                <li data-i18n="pricing.growth.f6">Rok izrade: 3–4 tjedna</li>
+              </ul>
+              <button class="btn btn--primary" type="button" data-package="Growth" data-i18n="pricing.cta">
+                Odaberite paket
+              </button>
+            </article>
+            <article class="price-card reveal">
+              <div class="price-card__name" data-i18n="pricing.custom.name">Custom</div>
+              <p class="price-card__ideal" data-i18n="pricing.custom.ideal">Idealno za: veće i specifične projekte</p>
+              <div class="price-card__price" data-i18n="pricing.custom.price">od 1.500 €</div>
+              <div class="price-card__maint" data-i18n="pricing.custom.maint">
+                Održavanje prema dogovoru
+              </div>
+              <ul class="price-card__features">
+                <li data-i18n="pricing.custom.f1">Opseg i funkcionalnosti po briefu</li>
+                <li data-i18n="pricing.custom.f2">CMS, rezervacije ili integracije po potrebi</li>
+                <li data-i18n="pricing.custom.f3">Ponuda nakon kratkog razgovora</li>
+                <li data-i18n="pricing.custom.f4">Domena i hosting prve godine</li>
+                <li data-i18n="pricing.custom.f5">Edukacija i krugovi izmjena po dogovoru</li>
+                <li data-i18n="pricing.custom.f6">Rok izrade ovisi o opsegu</li>
+              </ul>
+              <button class="btn btn--ghost" type="button" data-package="CustomProject" data-i18n="pricing.custom.cta">
+                Pošaljite upit
+              </button>
+            </article>
+          </div>
+          <div class="addons reveal">
+            <h3 class="addons__title" data-i18n="addons.title">Dodaci na zahtjev</h3>
+            <ul class="addons__list">
+              <li class="addons__item">
+                <span data-i18n="addons.1.name">Dodatni jezik na stranici</span>
+                <span class="addons__price" data-i18n="addons.1.price">od 150 €</span>
+              </li>
+              <li class="addons__item">
+                <span data-i18n="addons.2.name">Pisanje tekstova (copywriting)</span>
+                <span class="addons__price" data-i18n="addons.2.price">od 80 € po stranici</span>
+              </li>
+              <li class="addons__item">
+                <span data-i18n="addons.3.name">Izrada logotipa</span>
+                <span class="addons__price" data-i18n="addons.3.price">od 150 €</span>
+              </li>
+              <li class="addons__item">
+                <span data-i18n="addons.4.name">Google Business Profile, Analytics i Search Console</span>
+                <span class="addons__price" data-i18n="addons.4.price">90 €</span>
+              </li>
+              <li class="addons__item">
+                <span data-i18n="addons.5.name">Dodatna podstranica</span>
+                <span class="addons__price" data-i18n="addons.5.price">90 €</span>
+              </li>
+              <li class="addons__item">
+                <span data-i18n="addons.6.name">Dodatni krug izmjena nakon uključenih</span>
+                <span class="addons__price" data-i18n="addons.6.price">40 €/h</span>
+              </li>
+            </ul>
+          </div>
+          <p class="pricing__note reveal" data-i18n="pricing.note">
+            Cijene su konačne — obrt nije u sustavu PDV-a, pa se PDV ne obračunava. Jednokratna
+            cijena uključuje domenu i hosting za prvu godinu. Tekstovi i fotografije dostavlja
+            klijent ili se dogovaraju kao dodatak. Održavanje nije obavezno, ali ga preporučujemo.
+            Custom projekti se cijene prema dogovoru, nakon kratkog upita.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="o-nama">
+        <div class="container about__grid">
+          <div class="about__brand reveal">
+            <img class="about__logo" src="img/logo-n.svg" alt="" width="64" height="64" />
+            <h3>nDesign</h3>
+            <p class="about__role" data-i18n="about.role">Obrt za izradu web stranica · Zagreb</p>
+            <ul class="about__stats">
+              <li>
+                <strong data-i18n="about.stat1.value">4+</strong>
+                <span data-i18n="about.stat1.label">godine iskustva u web razvoju</span>
+              </li>
+              <li>
+                <strong data-i18n="about.stat2.value">3+</strong>
+                <span data-i18n="about.stat2.label">objavljenih projekata</span>
+              </li>
+              <li>
+                <strong data-i18n="about.stat3.value">24 h</strong>
+                <span data-i18n="about.stat3.label">odgovor na upit</span>
+              </li>
+            </ul>
+          </div>
+          <div class="about__text reveal">
+            <span class="section__eyebrow" data-i18n="about.eyebrow">O nama</span>
+            <h2 class="section__title" data-i18n="about.title">Obrt za izradu web stranica</h2>
+            <p data-i18n="about.p1">
+              nDesign je obrt za izradu web stranica sa sjedištem u Zagrebu. Pomažemo obrtnicima i
+              malim poduzećima da budu pronađivi online, s jasnom strukturom i bez nepotrebne
+              kompleksnosti.
+            </p>
+            <p data-i18n="about.p2">
+              Radimo s klijentima diljem Hrvatske — od frizerskih salona i apartmana do ordinacija
+              i uslužnih djelatnosti. Svaki projekt vodimo od prvog upita do lansiranja, s
+              transparentnom cijenom i bez posrednika.
+            </p>
+            <p data-i18n="about.p3">
+              Vjerujemo da dobra web stranica ne mora biti skupa niti komplicirana. Mora biti brza,
+              jasna i prilagođena onome što Vaše poslovanje stvarno treba.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="faq">
+        <div class="container">
+          <div class="reveal">
+            <span class="section__eyebrow" data-i18n="faq.eyebrow">FAQ</span>
+            <h2 class="section__title" data-i18n="faq.title">Česta pitanja</h2>
+            <p class="section__lead" data-i18n="faq.lead">
+              Odgovori na ono što klijenti najčešće pitaju prije suradnje.
+            </p>
+          </div>
+          <div class="faq__list">
+            <div class="faq__item reveal">
+              <button class="faq__question" type="button" aria-expanded="false">
+                <span data-i18n="faq.1.q">Koliko traje izrada web stranice?</span>
+                <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  <p data-i18n="faq.1.a">
+                    Start paket obično 5–10 radnih dana, Business 2–3 tjedna, Growth 3–4 tjedna.
+                    Custom projekti ovise o opsegu. Rok ovisi i o brzini dostave sadržaja s Vaše strane.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item reveal">
+              <button class="faq__question" type="button" aria-expanded="false">
+                <span data-i18n="faq.2.q">Što trebam pripremiti prije početka?</span>
+                <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  <p data-i18n="faq.2.a">
+                    Idealan scenarij: tekstovi, logo (ako ga imate), fotografije i jasna ideja što
+                    želite postići stranicom. Ako nešto nedostaje, mogu pomoći s copywritingom ili
+                    preporučiti suradnike.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item reveal">
+              <button class="faq__question" type="button" aria-expanded="false">
+                <span data-i18n="faq.3.q">Mogu li samostalno ažurirati sadržaj?</span>
+                <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  <p data-i18n="faq.3.a">
+                    Da — u Growth paketu dobivate CMS sustav za samostalno uređivanje. Custom
+                    projekti uključuju CMS ako je to dio dogovora. Za Start i Business pakete sitne
+                    izmjene rješavamo kroz mjesečno održavanje (do 30 min/mj).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item reveal">
+              <button class="faq__question" type="button" aria-expanded="false">
+                <span data-i18n="faq.4.q">Što uključuje mjesečno održavanje?</span>
+                <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  <p data-i18n="faq.4.a">
+                    Hosting, SSL, sigurnosne kopije, ažuriranja sustava i do 30 minuta sitnih
+                    izmjena mjesečno (tekst, slike, kontakt podaci). Veće izmjene se dogovaraju
+                    zasebno.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item reveal">
+              <button class="faq__question" type="button" aria-expanded="false">
+                <span data-i18n="faq.5.q">Radite li samo u Zagrebu?</span>
+                <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  <p data-i18n="faq.5.a">
+                    Ne — baziram se u Zagrebu, ali surađujem s klijentima iz cijele Hrvatske.
+                    Komunikacija ide putem e-pošte, poziva ili video sastanka.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item reveal">
+              <button class="faq__question" type="button" aria-expanded="false">
+                <span data-i18n="faq.6.q">Kako izgleda proces suradnje?</span>
+                <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  <p data-i18n="faq.6.a">
+                    1) Uvodni upit → 2) Besplatna demo verzija (bez obveze) → 3) Ponuda i dogovor →
+                    4) Razvoj i testiranje → 5) Lansiranje i predaja. Plaćanje po fazama ili po
+                    dogovoru.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item reveal">
+              <button class="faq__question" type="button" aria-expanded="false">
+                <span data-i18n="faq.7.q">Što uključuje besplatna demo verzija?</span>
+                <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  <p data-i18n="faq.7.a">
+                    Na temelju Vaših podataka izrađujem funkcionalnu web stranicu, postavljam je na
+                    privremenu adresu i dostavljam Vam link. Nije riječ o slici ili skici —
+                    stranicu možete otvoriti, pregledati i testirati na mobilnom uređaju. Ako
+                    želite nastaviti, prebacujem je na Vašu domenu; u protivnom nemate nikakvih
+                    troškova.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item reveal">
+              <button class="faq__question" type="button" aria-expanded="false">
+                <span data-i18n="faq.8.q">Radite li u WordPressu?</span>
+                <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  <p data-i18n="faq.8.a">
+                    Ne. Stranice pišem vlastitim kodom, bez WordPressa i bez dodataka. Rezultat je
+                    brže učitavanje i bolji rezultat na Google PageSpeed testu, a nema ni mjesečnih
+                    ažuriranja dodataka ni sigurnosnih rupa koje WordPress stranice moraju stalno
+                    zatvarati. Za Vas to znači stranicu koja radi godinama bez intervencija.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item reveal">
+              <button class="faq__question" type="button" aria-expanded="false">
+                <span data-i18n="faq.9.q">Što znači fiksna cijena?</span>
+                <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  <p data-i18n="faq.9.a">
+                    Cijena iz cjenika je cijena koju plaćate. Nema raspona koji se tijekom izrade
+                    pomiče prema gore ni naknadnog zaračunavanja za ono što je navedeno u paketu.
+                    Sve izvan paketa nalazi se u popisu dodataka s cijenom, pa unaprijed znate
+                    koliko bi eventualno proširenje stajalo.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="faq__item reveal">
+              <button class="faq__question" type="button" aria-expanded="false">
+                <span data-i18n="faq.10.q">Na tržištu postoje i jeftinije ponude. U čemu je razlika?</span>
+                <svg class="faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </button>
+              <div class="faq__answer">
+                <div class="faq__answer-inner">
+                  <p data-i18n="faq.10.a">
+                    Postoje, i uglavnom su rađene u WordPressu po gotovom predlošku, u tri do pet
+                    dana. To je sasvim legitiman izbor ako Vam treba samo osnovna prisutnost na
+                    internetu. Ja radim manji broj projekata, svaki pišem od nule prema Vašoj
+                    djelatnosti i ostajem dostupan nakon predaje. Budući da prije plaćanja dobivate
+                    link na gotovu stranicu, možete usporediti rezultat, a ne samo cijenu.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="kontakt">
+        <div class="container contact__grid">
+          <div class="contact__info reveal">
+            <span class="section__eyebrow" data-i18n="contact.eyebrow">Upit</span>
+            <h2 class="section__title" data-i18n="contact.title">
+              Zatražite demo verziju
+            </h2>
+            <p data-i18n="contact.lead">
+              Ispunite obrazac i javit ćemo Vam se u roku od 24 sata. Demo verziju izrađujemo bez
+              troška i bez obveze — dostavljamo Vam link na funkcionalnu stranicu, a odluku donosite
+              nakon toga.
+            </p>
+            <p class="contact__email-label" data-i18n="contact.emailLabel">E-pošta:</p>
+            <a class="contact__email js-email" href="mailto:kontakt@aperiodigital.hr"
+              >kontakt@aperiodigital.hr</a
+            >
+          </div>
+
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="name" data-i18n="form.name">Ime i prezime</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="form__group">
+                <label for="email" data-i18n="form.email">E-pošta</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="package-select" data-i18n="form.package">Paket</label>
+              <select id="package-select" name="package">
+                <option value="" data-i18n="form.package.placeholder">Odaberite paket (opcionalno)</option>
+                <option value="Start" data-i18n="form.package.start">Start — 390 €</option>
+                <option value="Business" data-i18n="form.package.business">Business — 690 €</option>
+                <option value="Growth" data-i18n="form.package.growth">Growth — 1.090 €</option>
+                <option value="CustomProject" data-i18n="form.package.project">Custom — od 1.500 €</option>
+                <option value="Custom" data-i18n="form.package.custom">Drugo / nisam siguran/na</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label for="message" data-i18n="form.message">Poruka</label>
+              <textarea
+                id="message"
+                name="message"
+                data-i18n-placeholder="form.message.placeholder"
+                placeholder="Opišite svoj projekt, rokove ili pitanja..."
+                required
+              ></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit" data-i18n="form.submit">Pošaljite upit</button>
+            <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__copy" data-i18n="footer.copy">
+          © 2026 nDesign · obrt za izradu web stranica, Zagreb
+        </p>
+        <div class="footer__links">
+          <a class="js-email" href="mailto:kontakt@aperiodigital.hr">kontakt@aperiodigital.hr</a>
+          <a href="#top" data-i18n="footer.top">Na vrh</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
